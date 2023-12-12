@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 # -----------------------------------------------------------
-# Python function that that prints a dictionary by ordered keys.
+# Python function that computes the square value of all integers of a matrix using map
 #
 # (C) 2023, Silas Edet, Uyo, Nigeria
 # email: silasedetsnr@gmail.com
 # -----------------------------------------------------------
 
-def print_sorted_dictionary(a_dictionary):
-    for key in sorted(a_dictionary):
-        print(f"{key}: {a_dictionary[key]}")
+def square_matrix_map(matrix=[]):
+    return list(map(lambda j: list(map(lambda i: i ** 2, j)), matrix))

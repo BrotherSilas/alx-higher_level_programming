@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 # -----------------------------------------------------------
-# Python function that that prints a dictionary by ordered keys.
+# Python function that demonstrates how to return a list with all values multiplied by a number
 #
 # (C) 2023, Silas Edet, Uyo, Nigeria
 # email: silasedetsnr@gmail.com
 # -----------------------------------------------------------
 
-def print_sorted_dictionary(a_dictionary):
-    for key in sorted(a_dictionary):
-        print(f"{key}: {a_dictionary[key]}")
+def multiply_list_map(my_list=[], number=0):
+    return list(map(lambda x: number * x, my_list))
