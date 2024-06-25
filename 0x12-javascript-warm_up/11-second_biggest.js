@@ -8,16 +8,16 @@ if (argv.length <= 3) {
 } else {
 // Convert arguments to integers
   // then remove the first two elements (node and script path)
-  const args = argv.slice(2).map(Number);
+  const array = argv.slice(2).map(Number);
 
   // Find the highest integer
-  const highest = Math.max(...args);
+  const highest = Math.max(...array);
 
   // Remove all occurrences of the highest integer
-  const filteredArgs = args.filter(numb => numb !== highest);
+  const filteredArray = array.filter(numb => numb !== highest);
 
   // Find the second highest integer
-  const secondHighest = Math.max(...filteredArgs);
+  const secondHighest = Math.max(...filteredArray);
 
   console.log(secondHighest);
 }
