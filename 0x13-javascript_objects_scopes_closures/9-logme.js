@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
-exports.logMe = function(list) {
-	for (let i=0; i < list.length-1; i++) {
-	  console.log(`${i}: ${list}`);
-	}
+let count = 0; // to keep track of the number of calls
+
+exports.logMe = function(item) {
+	console.log(`${count}: ${item}`);
+	count++; // count increment after previous printing
 };
