@@ -8,9 +8,15 @@ async function concatFiles (pathFileA, pathFileB, pathFileC) {
     const fileC = fileA + fileB;
 
     await fs.writeFile(pathFileC, fileC);
-    console.log('files have been concat successsfully.');
   } catch (error) {
-    console.error('Error while concatenating files: ', error);
+    process.exit(1);
   }
 }
-concatFiles('fileA', 'fileB', 'fileC');
+
+if (process.argv.length !== 5) {
+  process.exit(1);
+}
+
+const [,, pathFileA, pathFileB, pathFileC] = process.argv;
+
+concatFiles(pathFileA, pathFileB, pathFileC);
